@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NoteSR Encryption Algorithm:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NoteSR_Encryption_Algorithm_jar</output-path>
+    <root id="archive" name="NoteSR Encryption Algorithm.jar">
+      <element id="module-output" name="NoteSR Encryption Algorithm" />
+    </root>
+  </artifact>
+</component>
