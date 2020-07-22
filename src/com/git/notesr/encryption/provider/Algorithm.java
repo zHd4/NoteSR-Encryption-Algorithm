@@ -1,5 +1,7 @@
 package com.git.notesr.encryption.provider;
 
+import java.util.Arrays;
+
 class Algorithm {
     private final byte[] key;
 
@@ -12,6 +14,7 @@ class Algorithm {
 
     public byte[] transform(byte[] data, int mode) {
         int keyIndex = 0;
+
         byte[] transformed = new byte[data.length];
 
         for(int i = 0; i < data.length; i++) {
