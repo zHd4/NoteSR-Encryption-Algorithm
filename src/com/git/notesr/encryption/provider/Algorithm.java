@@ -18,10 +18,7 @@ class Algorithm {
         byte[] transformed = new byte[data.length];
 
         for(int i = 0; i < data.length; i++) {
-            transformed[i] = (byte) (data[i] + (
-                    mode == ENCRYPTION_MODE ?  key[keyIndex] : -key[keyIndex]
-            ));
-
+            transformed[i] = (byte) (mode == ENCRYPTION_MODE ? data[i] + key[keyIndex] : data[i] - key[keyIndex]);
             keyIndex = keyIndex == key.length - 1 ? 0 : keyIndex + 1;
         }
 
