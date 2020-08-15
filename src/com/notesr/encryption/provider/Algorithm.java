@@ -1,6 +1,4 @@
-package com.git.notesr.encryption.provider;
-
-import java.util.Arrays;
+package com.notesr.encryption.provider;
 
 class Algorithm {
     private final byte[] key;

@@ -1,4 +1,4 @@
-package com.git.notesr.encryption.provider;
+package com.notesr.encryption.provider;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

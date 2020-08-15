@@ -1,8 +1,7 @@
-package com.git.notesr.encryption.provider;
+package com.notesr.encryption.provider;
 
-import com.git.notesr.encryption.provider.exceptions.BadCryptException;
-import com.git.notesr.encryption.provider.exceptions.CryptoKeyException;
-
+import com.notesr.encryption.provider.exceptions.BadCryptException;
+import com.notesr.encryption.provider.exceptions.CryptoKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 

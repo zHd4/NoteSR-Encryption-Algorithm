@@ -1,8 +1,8 @@
-package com.git.notesr.encryption.provider;
+package com.notesr.encryption.provider;
 
 import java.util.Arrays;
 import java.security.NoSuchAlgorithmException;
-import com.git.notesr.encryption.provider.exceptions.CryptoKeyException;
+import com.notesr.encryption.provider.exceptions.CryptoKeyException;
 
 public class KeyGenerator {
     private final int size;
