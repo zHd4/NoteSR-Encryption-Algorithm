@@ -8,6 +8,7 @@ import java.util.Arrays;
 @SuppressWarnings("unused")
 public class CryptoProvider {
     private byte[] iv;
+
     private final byte[] key;
 
     private int ivSize = 16;
@@ -79,7 +80,8 @@ public class CryptoProvider {
         this.iv = keyGenerator.createKey(source);
     }
 
-    public void initializeVector(final String source, final int size) throws NoSuchAlgorithmException, CryptoKeyException {
+    public void initializeVector(final String source, final int size) throws NoSuchAlgorithmException,
+            CryptoKeyException {
         this.ivSize = size;
         initializeVector(source);
     }
