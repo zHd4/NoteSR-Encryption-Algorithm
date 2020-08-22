@@ -19,7 +19,7 @@ public class UnitTest {
 
     @Test
     public void testEncryption() throws NoSuchAlgorithmException, CryptoKeyException, BadCryptException {
-        String passphrase = "admin1234~545";
+        String passphrase = "admin1234_+(((99*!2@@8*8)000=++++======~545";
         String iv = "--+simple_vector_passphrase++";
 
         String data = "Lorem ipsum dolor sit amet.";
