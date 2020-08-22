@@ -17,13 +17,12 @@ public class UnitTest {
     private static final int KEY_SIZE = 128;
     private static final int IV_SIZE = 32;
 
-    @SuppressWarnings("SpellCheckingInspection")
     @Test
     public void testEncryption() throws NoSuchAlgorithmException, CryptoKeyException, BadCryptException {
-        String passphrase = "admin1234test777";
-        String iv = "simpleiv0987654321";
+        String passphrase = "admin1234~545";
+        String iv = "--+simple_vector_passphrase++";
 
-        String data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+        String data = "Lorem ipsum dolor sit amet.";
 
         KeyGenerator keyGenerator = new KeyGenerator(KEY_SIZE);
         CryptoProvider cryptoProvider = new CryptoProvider(keyGenerator.createKey(passphrase));
