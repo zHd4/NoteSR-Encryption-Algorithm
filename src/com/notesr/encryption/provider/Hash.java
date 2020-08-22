@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 class Hash {
-    public static byte[] sha256(byte[] raw) throws NoSuchAlgorithmException {
+    public static byte[] sha256(final byte[] raw) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         return digest.digest(raw);
     }

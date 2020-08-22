@@ -20,7 +20,7 @@ public class CryptoProvider {
         initializeVector(new String(Hash.randomSHA256Hash()));
     }
 
-    public CryptoProvider(int size) throws NoSuchAlgorithmException, CryptoKeyException {
+    public CryptoProvider(final int size) throws NoSuchAlgorithmException, CryptoKeyException {
         this.keySize = size;
 
         KeyGenerator keyGenerator = new KeyGenerator(keySize);
@@ -29,14 +29,14 @@ public class CryptoProvider {
         initializeVector(new String(Hash.randomSHA256Hash()));
     }
 
-    public CryptoProvider(byte[] key) throws NoSuchAlgorithmException, CryptoKeyException {
+    public CryptoProvider(final byte[] key) throws NoSuchAlgorithmException, CryptoKeyException {
         this.keySize = key.length;
         this.key = key;
 
         initializeVector(new String(Hash.randomSHA256Hash()));
     }
 
-    public byte[] encrypt(byte[] raw) throws NoSuchAlgorithmException {
+    public byte[] encrypt(final byte[] raw) throws NoSuchAlgorithmException {
         Algorithm algorithm = new Algorithm(this.key);
 
         byte[] checkSum = Hash.sha256(raw);
@@ -52,7 +52,7 @@ public class CryptoProvider {
         return encrypted;
     }
 
-    public byte[] decrypt(byte[] encrypted) throws NoSuchAlgorithmException, BadCryptException {
+    public byte[] decrypt(final byte[] encrypted) throws NoSuchAlgorithmException, BadCryptException {
         Algorithm algorithm = new Algorithm(this.iv);
 
         int hashSize = Hash.randomSHA256Hash().length;
@@ -74,12 +74,12 @@ public class CryptoProvider {
         return decrypted;
     }
 
-    public void initializeVector(String source) throws NoSuchAlgorithmException, CryptoKeyException {
+    public void initializeVector(final String source) throws NoSuchAlgorithmException, CryptoKeyException {
         KeyGenerator keyGenerator = new KeyGenerator(ivSize);
         this.iv = keyGenerator.createKey(source);
     }
 
-    public void initializeVector(String source, int size) throws NoSuchAlgorithmException, CryptoKeyException {
+    public void initializeVector(final String source, final int size) throws NoSuchAlgorithmException, CryptoKeyException {
         this.ivSize = size;
         initializeVector(source);
     }

@@ -7,7 +7,7 @@ import com.notesr.encryption.provider.exceptions.CryptoKeyException;
 public class KeyGenerator {
     private final int size;
 
-    public KeyGenerator(int size) {
+    public KeyGenerator(final int size) {
         this.size = size;
     }
 
@@ -16,7 +16,7 @@ public class KeyGenerator {
         return generate(passphrase);
     }
 
-    public byte[] createKey(String passphrase) throws CryptoKeyException, NoSuchAlgorithmException {
+    public byte[] createKey(final String passphrase) throws CryptoKeyException, NoSuchAlgorithmException {
         if(passphrase != null) {
             if(passphrase.isEmpty()) {
                 throw new CryptoKeyException("Key cannot be empty");
@@ -28,7 +28,7 @@ public class KeyGenerator {
         return generate(passphrase);
     }
 
-    private byte[] generate(String keySource) throws NoSuchAlgorithmException {
+    private byte[] generate(final String keySource) throws NoSuchAlgorithmException {
         byte[] key = new byte[0];
         byte offset = keySource.getBytes()[0];
         byte[] hashNext = Hash.sha256(keySource.getBytes());
